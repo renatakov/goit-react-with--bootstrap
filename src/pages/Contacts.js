@@ -4,9 +4,14 @@ import discord from "../images/icons/discord-512.webp"
 import tiktok from "../images/icons/tiktok-icon-2.svg"
 import facebook from "../images/icons/facebook-2.svg"
 
+// import withLog from "../components/hoc/withLog"
+
+import TestComponent from "../components/TestComponent"
+
 function Contacts() {
   return(
     <>
+    <TestComponent a="Renata"/>
   <h1>Contacts</h1>
   <address>
     <p>Город Киев</p>

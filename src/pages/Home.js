@@ -4,11 +4,22 @@ import { Container, Col, Row, Card } from "react-bootstrap";
 import img1 from "../images/img101.png";
 import img2 from "../images/img102.jpg";
 import img3 from "../images/img103.png";
+import Toggler from "../components/Toggler";
 
 function Home() {
   return (
     <>
       <h1>Home</h1>
+      <Toggler>
+        {(isOpen, onToggle) => (
+          <>
+            <button type="button" onChange={onToggle} checked={isOpen}>
+              {isOpen ? "hide" : "show"}
+            </button>
+            {isOpen && <Slider />}
+          </>
+        )}
+      </Toggler>
       <Slider />
       <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
         <Row>
@@ -44,7 +55,7 @@ function Home() {
       <Container>
         <Row>
           <Col md={5}>
-            <img src={img1} height={200} alt="ppp"/>
+            <img src={img1} height={200} alt="ppp" />
           </Col>
           <Col md={7}>
             <h2>Title</h2>
@@ -60,7 +71,7 @@ function Home() {
         </Row>
         <Row>
           <Col md={5}>
-            <img src={img2} height={200} alt="ppp"/>
+            <img src={img2} height={200} alt="ppp" />
           </Col>
           <Col md={7}>
             <h2>Title</h2>
@@ -72,12 +83,11 @@ function Home() {
               nobis deleniti. Delectus illum sed illo harum maiores facere!
               Saepe necessitatibus eaque rem amet modi molestiae!
             </p>
-
           </Col>
         </Row>
         <Row>
           <Col md={5}>
-            <img src={img3} height={200} alt="ppp"/>
+            <img src={img3} height={200} alt="ppp" />
           </Col>
           <Col md={7}>
             <h2>Title</h2>

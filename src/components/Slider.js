@@ -3,6 +3,8 @@ import img1 from "../images/img101.png";
 import img2 from "../images/img102.jpg";
 import img3 from "../images/img103.png";
 import { Carousel } from "react-bootstrap";
+// import withToggle  from "../components/hoc/withToggle"
+
 
 function Slider() {
   return (
@@ -32,4 +34,5 @@ function Slider() {
   );
 }
 
-export default Slider;
+// export default withToggle(Slider);
+export default Slider
